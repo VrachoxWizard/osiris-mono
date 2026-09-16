@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHeader } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
+import { JsonLd } from "@/components";
 import { ServiceBlock } from "./ServiceBlock";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -24,6 +25,20 @@ export default async function ServicesPage({ params }: Props) {
 
   return (
     <div>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: serviceKeys.map((key) => t(`${key}.title`)),
+          provider: {
+            "@type": "ProfessionalService",
+            name: "OSIRIS",
+            url: "https://osiris.hr",
+          },
+          areaServed: "HR",
+          description: t("intro"),
+        }}
+      />
       <PageHeader
         eyebrow={t("eyebrow")}
         heading={t("heading")}

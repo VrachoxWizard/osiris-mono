@@ -8,7 +8,7 @@ import { MotionConfig } from "motion/react";
 import { routing } from "@/i18n/routing";
 import { getPathname } from "@/i18n/navigation";
 import { Navbar, Footer } from "@/layouts";
-import { NoiseBackground, FloatingCursor } from "@/components";
+import { NoiseBackground, FloatingCursor, JsonLd } from "@/components";
 import "@/styles/globals.css";
 
 const inter = Inter({
@@ -98,6 +98,21 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${bricolage.variable}`}>
       <body className="mx-auto max-w-360 bg-background font-sans text-foreground antialiased">
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            name: "OSIRIS",
+            url: "https://osiris.hr",
+            image: "https://osiris.hr/og-image.png",
+            areaServed: "HR",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Zagreb",
+              addressCountry: "HR",
+            },
+          }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <MotionConfig reducedMotion="user">
             <NoiseBackground />

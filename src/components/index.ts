@@ -6,3 +6,4 @@ export {
 } from "./TextGenerateEffect";
 export { OsirisWordmark } from "./brand";
 export { LanguageSwitcher } from "./LanguageSwitcher";
+export { JsonLd } from "./JsonLd";
