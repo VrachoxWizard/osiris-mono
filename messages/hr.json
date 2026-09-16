@@ -90,6 +90,105 @@
     "line2": "ozbiljniju stranicu?",
     "button": "Zatraži ponudu"
   },
+  "WorkPage": {
+    "eyebrow": "Radovi",
+    "heading": "Radovi koji rade svoj posao.",
+    "intro": "Svaki projekt je stvarna stranica za stvarnu tvrtku. Bez izmišljenih klijenata, bez lažnih brojki.",
+    "viewProject": "Pogledaj projekt"
+  },
+  "CaseStudy": {
+    "clientLabel": "Klijent",
+    "industryLabel": "Industrija",
+    "yearLabel": "Godina",
+    "servicesLabel": "Usluge",
+    "challengeLabel": "Izazov",
+    "solutionLabel": "Rješenje",
+    "visitSite": "Posjeti stranicu",
+    "nextProject": "Sljedeći projekt",
+    "backToWork": "Svi radovi",
+    "serviceNames": {
+      "web": "Web razvoj",
+      "maintenance": "Održavanje",
+      "seo": "SEO"
+    }
+  },
+  "ServicesPage": {
+    "eyebrow": "Usluge",
+    "heading": "Ono u čemu",
+    "headingAccent": "smo dobri.",
+    "intro": "Tri usluge, jedan fokus: stranica koja stvarno radi svoj posao, od prvog dana i dugo poslije.",
+    "web": {
+      "number": "01",
+      "title": "Web stranice",
+      "description": "Dizajniramo i razvijamo web stranice koje odražavaju tvoje poslovanje i rade ono što trebaju, bez nepotrebnih dodataka koji usporavaju stranicu ili zbunjuju posjetitelje.",
+      "includes": [
+        "Dizajn prilagođen tvom brendu",
+        "Responzivan prikaz na svim uređajima",
+        "Brzo učitavanje i čista izvedba",
+        "Jednostavno upravljanje sadržajem"
+      ]
+    },
+    "maintenance": {
+      "number": "02",
+      "title": "Održavanje",
+      "description": "Web stranica nakon lansiranja treba pažnju. Pratimo sigurnost, ažuriranja i brzinu kako bi sve funkcioniralo bez prekida.",
+      "includes": [
+        "Redovita sigurnosna ažuriranja",
+        "Praćenje performansi",
+        "Brza intervencija u slučaju problema",
+        "Manje izmjene sadržaja na zahtjev"
+      ]
+    },
+    "seo": {
+      "number": "03",
+      "title": "SEO",
+      "description": "Dobra stranica mora biti i pronađena. Radimo na tehničkim temeljima, strukturi i sadržaju koji pomažu da te ljudi pronađu na Googleu.",
+      "includes": [
+        "Tehnička SEO optimizacija",
+        "Struktura i interno povezivanje",
+        "Optimizacija brzine i Core Web Vitals",
+        "Osnovna optimizacija sadržaja"
+      ]
+    },
+    "ctaLine1": "Trebaš nešto",
+    "ctaLine2": "od ovoga?",
+    "ctaButton": "Zatraži ponudu"
+  },
+  "AboutPage": {
+    "eyebrow": "Studio",
+    "heading": "Neovisni studio",
+    "headingAccent": "iz Zagreba.",
+    "paragraph1": "OSIRIS je malen digitalni studio koji radi s manjim i srednjim tvrtkama u Hrvatskoj. Nema slojeva menadžmenta ni prebacivanja između odjela, komuniciraš izravno s osobom koja radi na tvom projektu.",
+    "paragraph2": "Ta veličina je prednost. Manje sastanaka, manje birokracije, više vremena provedenog na stvarnom radu. Svaki projekt dobiva punu pažnju, a ne djelić vremena raspoređen na desetke klijenata.",
+    "paragraph3": "Fokus je uvijek isti: stranica koja izgleda profesionalno, radi brzo i stvarno pomaže poslovanju, bez obzira je li riječ o novoj stranici, redizajnu, održavanju ili SEO-u.",
+    "cta": "Zatraži ponudu"
+  },
+  "ContactPage": {
+    "eyebrow": "Kontakt",
+    "heading": "Razgovarajmo",
+    "headingAccent": "o projektu.",
+    "intro": "Kratak opis onoga što ti treba je dovoljan za početak. Javljamo se u roku jednog radnog dana.",
+    "form": {
+      "name": "Ime i prezime",
+      "company": "Tvrtka",
+      "email": "Email",
+      "needLabel": "Što trebaš?",
+      "needOptions": {
+        "newWebsite": "Nova stranica",
+        "redesign": "Redizajn",
+        "maintenance": "Održavanje",
+        "seo": "SEO",
+        "other": "Ostalo"
+      },
+      "message": "Opiši projekt",
+      "messagePlaceholder": "Nekoliko rečenica o tome što gradiš i što ti treba...",
+      "submit": "Pošalji upit",
+      "submitting": "Šaljem...",
+      "success": "Hvala. Javit ćemo se uskoro.",
+      "error": "Nešto je pošlo po zlu. Pokušaj ponovno ili nam piši izravno na email."
+    },
+    "infoHeading": "Kontakt podaci"
+  },
   "Footer": {
     "closingLine1": "Napravimo",
     "closingLine2": "nešto korisno.",

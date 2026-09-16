@@ -90,6 +90,105 @@
     "line2": "serious website?",
     "button": "Get in touch"
   },
+  "WorkPage": {
+    "eyebrow": "Work",
+    "heading": "Work that does its job.",
+    "intro": "Every project is a real website for a real business. No invented clients, no fake numbers.",
+    "viewProject": "View project"
+  },
+  "CaseStudy": {
+    "clientLabel": "Client",
+    "industryLabel": "Industry",
+    "yearLabel": "Year",
+    "servicesLabel": "Services",
+    "challengeLabel": "Challenge",
+    "solutionLabel": "Solution",
+    "visitSite": "Visit website",
+    "nextProject": "Next project",
+    "backToWork": "All work",
+    "serviceNames": {
+      "web": "Web Development",
+      "maintenance": "Maintenance",
+      "seo": "SEO"
+    }
+  },
+  "ServicesPage": {
+    "eyebrow": "Services",
+    "heading": "What we're",
+    "headingAccent": "good at.",
+    "intro": "Three services, one focus: a website that actually does its job, from day one and long after.",
+    "web": {
+      "number": "01",
+      "title": "Web Development",
+      "description": "We design and build websites that reflect your business and do what they need to, without extra features that slow the site down or confuse visitors.",
+      "includes": [
+        "Design tailored to your brand",
+        "Responsive on every device",
+        "Fast loading and clean execution",
+        "Simple content management"
+      ]
+    },
+    "maintenance": {
+      "number": "02",
+      "title": "Maintenance",
+      "description": "A website needs attention after launch. We monitor security, updates, and speed to keep everything running without interruption.",
+      "includes": [
+        "Regular security updates",
+        "Performance monitoring",
+        "Fast response when something breaks",
+        "Small content changes on request"
+      ]
+    },
+    "seo": {
+      "number": "03",
+      "title": "SEO",
+      "description": "A good website also needs to be found. We work on technical foundations, structure, and content that help people find you on Google.",
+      "includes": [
+        "Technical SEO optimization",
+        "Structure and internal linking",
+        "Speed and Core Web Vitals optimization",
+        "Basic content optimization"
+      ]
+    },
+    "ctaLine1": "Need one",
+    "ctaLine2": "of these?",
+    "ctaButton": "Get in touch"
+  },
+  "AboutPage": {
+    "eyebrow": "Studio",
+    "heading": "An independent studio",
+    "headingAccent": "from Zagreb.",
+    "paragraph1": "OSIRIS is a small digital studio working with small and medium businesses in Croatia. There are no layers of management or handoffs between departments, you talk directly to the person working on your project.",
+    "paragraph2": "That size is an advantage. Fewer meetings, less bureaucracy, more time spent on actual work. Every project gets full attention, not a fraction of time split across dozens of clients.",
+    "paragraph3": "The focus stays the same: a website that looks professional, runs fast, and actually helps the business, whether that means a new site, a redesign, maintenance, or SEO.",
+    "cta": "Get in touch"
+  },
+  "ContactPage": {
+    "eyebrow": "Contact",
+    "heading": "Let's talk",
+    "headingAccent": "about your project.",
+    "intro": "A short description of what you need is enough to get started. We reply within one business day.",
+    "form": {
+      "name": "Full name",
+      "company": "Company",
+      "email": "Email",
+      "needLabel": "What do you need?",
+      "needOptions": {
+        "newWebsite": "New website",
+        "redesign": "Redesign",
+        "maintenance": "Maintenance",
+        "seo": "SEO",
+        "other": "Other"
+      },
+      "message": "Project description",
+      "messagePlaceholder": "A few sentences about what you're building and what you need...",
+      "submit": "Send enquiry",
+      "submitting": "Sending...",
+      "success": "Thanks. We'll be in touch soon.",
+      "error": "Something went wrong. Please try again or email us directly."
+    },
+    "infoHeading": "Contact details"
+  },
   "Footer": {
     "closingLine1": "Let's build",
     "closingLine2": "something useful.",
