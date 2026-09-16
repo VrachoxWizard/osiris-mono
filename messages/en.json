@@ -11,6 +11,85 @@
     "menu": "Menu",
     "close": "Close"
   },
+  "Hero": {
+    "badge": "Digital studio from Zagreb",
+    "line1": "WEBSITES THAT",
+    "line2": "DO THEIR",
+    "line3": "JOB.",
+    "description": "Design, development, maintenance, and SEO for businesses that want a serious presence online.",
+    "primaryCta": "View work",
+    "secondaryCta": "Get in touch",
+    "scroll": "Scroll",
+    "discover": "Discover"
+  },
+  "Services": {
+    "label": "What we do",
+    "title": "Three services",
+    "subtitle": "one focus",
+    "cta": "All services",
+    "items": {
+      "web": {
+        "number": "01",
+        "title": "Web Development",
+        "description": "Modern, fast, responsive websites built around what your business actually needs."
+      },
+      "maintenance": {
+        "number": "02",
+        "title": "Maintenance",
+        "description": "Ongoing care that keeps your website secure, current, and fast after launch."
+      },
+      "seo": {
+        "number": "03",
+        "title": "SEO",
+        "description": "Technical foundations, structure, and content that get you found on Google."
+      }
+    }
+  },
+  "WorkTeaser": {
+    "label": "Selected work",
+    "title": "Work that",
+    "subtitle": "speaks for itself",
+    "cta": "View all work"
+  },
+  "AboutTeaser": {
+    "label": "Studio",
+    "title": "Small team.",
+    "subtitle": "Direct approach.",
+    "description": "OSIRIS is an independent digital studio based in Zagreb. No middlemen, no unnecessary bureaucracy, and personal involvement in every project.",
+    "cta": "Meet the studio"
+  },
+  "Process": {
+    "label": "How we work",
+    "title": "A process that",
+    "subtitle": "makes sense",
+    "steps": {
+      "discovery": {
+        "number": "01",
+        "title": "Conversation",
+        "description": "We get to know your business, your goals, and what you actually need."
+      },
+      "design": {
+        "number": "02",
+        "title": "Design",
+        "description": "We build a visual direction that fits your brand and your customers."
+      },
+      "development": {
+        "number": "03",
+        "title": "Development",
+        "description": "We code a site that is fast, secure, and simple to maintain."
+      },
+      "launch": {
+        "number": "04",
+        "title": "Launch and support",
+        "description": "We stay involved after launch to make sure everything keeps working."
+      }
+    }
+  },
+  "FinalCta": {
+    "line1": "Ready for a",
+    "line2": "serious website?",
+    "button": "Get in touch"
+  },
   "Footer": {
     "closingLine1": "Let's build",
     "closingLine2": "something useful.",

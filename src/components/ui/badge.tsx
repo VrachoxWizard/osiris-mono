@@ -15,9 +15,9 @@ export function Badge({
 }: BadgeProps) {
   const variants = {
     default:
-      "bg-black/60 backdrop-blur-sm px-3 py-1 text-xs uppercase tracking-widest text-white/90 border border-white/20",
+      "bg-background/60 backdrop-blur-sm px-3 py-1 text-xs uppercase tracking-widest text-foreground/90 border border-border",
     outline:
-      "border border-neutral-800 px-3 py-1 text-xs uppercase tracking-widest text-neutral-400",
+      "border border-border px-3 py-1 text-xs uppercase tracking-widest text-muted-foreground",
   };
 
   return (

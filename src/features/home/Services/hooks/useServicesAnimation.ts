@@ -1,9 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 
-export function useFeaturesAnimation() {
+export function useServicesAnimation() {
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, {
         once: true,

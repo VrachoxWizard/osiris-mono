@@ -1,55 +1,53 @@
 "use client";
 
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui";
+import type { WorkProject } from "@/content/work";
 
 interface ProjectCardProps {
-  title: string;
-  subtitle: string;
-  image: string;
-  year: string;
+  project: WorkProject;
 }
 
-export function ProjectCard({
-  title,
-  subtitle,
-  image,
-  year,
-}: ProjectCardProps) {
-  return (
-    <div className="group cursor-pointer">
-      <div className="relative aspect-[4/3] overflow-hidden border-2 border-white/20 mb-4 group-hover:border-white/50 transition-all duration-300">
-        <Image
-          src={image || "/placeholder.svg"}
-          alt={title}
-          fill
-          className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+export function ProjectCard({ project }: ProjectCardProps) {
+  const locale = useLocale() as "hr" | "en";
+  const t = useTranslations("WorkTeaser");
 
-        {/* Year badge */}
+  return (
+    <Link
+      href={{ pathname: "/work/[slug]", params: { slug: project.slug } }}
+      className="group block"
+    >
+      <div className="relative mb-4 aspect-4/3 overflow-hidden border-2 border-border transition-all duration-300 group-hover:border-accent/60">
+        <Image
+          src={project.image}
+          alt={`${project.client} — ${project.industry[locale]}`}
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="transform object-cover object-top grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
+        />
+        <div className="absolute inset-0 bg-background/40 transition-colors group-hover:bg-background/20"></div>
+
         <div className="absolute top-4 right-4">
-          <Badge>{year}</Badge>
+          <Badge>{project.year}</Badge>
         </div>
 
-        {/* Overlay content */}
-        <div className="absolute bottom-0 left-0 w-full p-4 bg-black/60 backdrop-blur-sm translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-          <div className="text-xs uppercase tracking-widest text-white/80 mb-1">
-            View Project
+        <div className="absolute bottom-0 left-0 w-full translate-y-full bg-background/60 p-4 backdrop-blur-sm transition-transform duration-300 group-hover:translate-y-0">
+          <div className="mb-1 text-xs uppercase tracking-widest text-accent">
+            {t("cta")}
           </div>
         </div>
       </div>
 
-      {/* Project title */}
-      <h3 className="text-2xl font-bold tracking-tighter text-white group-hover:translate-x-2 transition-transform duration-300">
-        {title}
+      <h3 className="text-2xl font-bold tracking-tight text-foreground transition-transform duration-300 group-hover:translate-x-2">
+        {project.client}
       </h3>
-      <p className="text-white/70 group-hover:text-white/90 transition-colors">
-        {subtitle}
+      <p className="text-muted-foreground transition-colors group-hover:text-foreground/90">
+        {project.industry[locale]}
       </p>
 
-      {/* Animated underline */}
-      <div className="h-px w-0 bg-white group-hover:w-20 transition-all duration-300 mt-2"></div>
-    </div>
+      <div className="mt-2 h-px w-0 bg-accent transition-all duration-300 group-hover:w-20"></div>
+    </Link>
   );
 }

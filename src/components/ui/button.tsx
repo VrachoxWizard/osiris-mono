@@ -17,11 +17,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       "uppercase tracking-widest transition-all duration-300 flex items-center justify-center";
 
     const variants = {
-      primary: "bg-white text-black hover:bg-white/90",
+      primary: "bg-foreground text-background hover:bg-foreground/90",
       secondary:
-        "border border-neutral-800 text-neutral-400 hover:border-neutral-600 hover:text-white",
-      outline: "border border-white hover:bg-white hover:text-black",
-      ghost: "text-neutral-400 hover:text-white hover:bg-white/5",
+        "border border-border text-muted-foreground hover:border-muted-foreground hover:text-foreground",
+      outline: "border border-foreground hover:bg-foreground hover:text-background",
+      ghost: "text-muted-foreground hover:text-foreground hover:bg-foreground/5",
     };
 
     const sizes = {

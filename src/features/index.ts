@@ -1,8 +1,8 @@
 // Home page features
 export { Hero } from "./home/Hero";
-export { Features } from "./home/Features";
+export { Services } from "./home/Services";
 export { Work } from "./home/Work";
+export { AboutTeaser } from "./home/AboutTeaser";
 export { Process } from "./home/Process";
-export { Testimonials } from "./home/Testimonials";
-export { Pricing } from "./home/Pricing";
+export { FinalCta } from "./home/FinalCta";
 export { Contact } from "./home/Contact";

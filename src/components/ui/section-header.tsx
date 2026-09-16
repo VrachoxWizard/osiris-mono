@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
 interface SectionHeaderProps {
@@ -30,18 +30,18 @@ export function SectionHeader({
 
   return (
     <Wrapper className={cn("mb-16", className)} {...wrapperProps}>
-      <div className="flex items-center gap-4 mb-6">
-        <div className="h-px w-12 bg-white/40"></div>
-        <div className="text-xs uppercase tracking-widest text-white/80">
+      <div className="mb-6 flex items-center gap-4">
+        <div className="h-px w-12 bg-accent"></div>
+        <div className="text-xs uppercase tracking-widest text-muted-foreground">
           {label}
         </div>
       </div>
-      <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-white">
+      <h2 className="text-display-lg font-display font-bold tracking-tight text-foreground">
         {title}
         {subtitle && (
           <>
             <br />
-            <span className="text-white/70">{subtitle}</span>
+            <span className="text-muted-foreground">{subtitle}</span>
           </>
         )}
       </h2>

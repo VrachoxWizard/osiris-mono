@@ -1,62 +1,47 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
+import { useTranslations } from "next-intl";
 import { SectionHeader } from "@/components/ui";
-import { processConfig } from "@/config";
 import { ProcessStep } from "./components";
+
+const stepKeys = ["discovery", "design", "development", "launch"] as const;
 
 export function Process() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const t = useTranslations("Process");
 
   return (
-    <section
-      id="process"
-      className="py-24 relative overflow-hidden bg-[#0a0a0a]"
-    >
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+    <section className="relative overflow-hidden border-t border-border py-24">
+      <div className="relative z-10 mx-auto max-w-360 px-4 md:px-8">
         <SectionHeader
-          label={processConfig.label}
-          title={processConfig.title}
-          subtitle={processConfig.subtitle}
+          label={t("label")}
+          title={t("title")}
+          subtitle={t("subtitle")}
         />
 
         <div ref={ref} className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-[39px] top-0 bottom-0 w-[2px] bg-white/30 md:left-1/2"></div>
+          <div className="absolute bottom-0 left-9.75 top-0 w-0.5 bg-border md:left-1/2"></div>
 
-          {processConfig.steps.map((step, index) => (
-            <ProcessStep
-              key={index}
-              number={step.number}
-              title={step.title}
-              description={step.description}
-              isEven={index % 2 !== 0}
-            />
+          {stepKeys.map((key, index) => (
+            <motion.div
+              key={key}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ProcessStep
+                number={t(`steps.${key}.number`)}
+                title={t(`steps.${key}.title`)}
+                description={t(`steps.${key}.description`)}
+                isEven={index % 2 !== 0}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="absolute top-40 right-20 w-32 h-32 border border-white/10"></div>
-      <div className="absolute bottom-60 left-20 w-40 h-40 border border-white/5"></div>
-
-      <style jsx>{`
-        .absolute-vertical-center {
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        @media (min-width: 768px) {
-          .absolute-vertical-center {
-            position: static;
-            transform: none;
-          }
-        }
-      `}</style>
     </section>
   );
 }

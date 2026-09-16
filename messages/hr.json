@@ -11,6 +11,85 @@
     "menu": "Izbornik",
     "close": "Zatvori"
   },
+  "Hero": {
+    "badge": "Digitalni studio iz Zagreba",
+    "line1": "WEB STRANICE",
+    "line2": "KOJE RADE",
+    "line3": "SVOJ POSAO.",
+    "description": "Dizajn, razvoj, održavanje i SEO za tvrtke koje žele ozbiljniju prisutnost na internetu.",
+    "primaryCta": "Pogledaj radove",
+    "secondaryCta": "Kontaktiraj nas",
+    "scroll": "Skroliraj",
+    "discover": "Istraži"
+  },
+  "Services": {
+    "label": "Naše usluge",
+    "title": "Tri usluge",
+    "subtitle": "jedan fokus",
+    "cta": "Sve usluge",
+    "items": {
+      "web": {
+        "number": "01",
+        "title": "Web stranice",
+        "description": "Moderne, brze i responzivne web stranice građene oko stvarnih potreba tvog poslovanja."
+      },
+      "maintenance": {
+        "number": "02",
+        "title": "Održavanje",
+        "description": "Redovita briga koja tvoju stranicu drži sigurnom, ažurnom i brzom nakon lansiranja."
+      },
+      "seo": {
+        "number": "03",
+        "title": "SEO",
+        "description": "Tehnički temelji, struktura i sadržaj zbog kojih te ljudi pronađu na Googleu."
+      }
+    }
+  },
+  "WorkTeaser": {
+    "label": "Odabrani radovi",
+    "title": "Radovi koji",
+    "subtitle": "govore sami za sebe",
+    "cta": "Pogledaj sve radove"
+  },
+  "AboutTeaser": {
+    "label": "Studio",
+    "title": "Mali tim.",
+    "subtitle": "Direktan pristup.",
+    "description": "OSIRIS je neovisni digitalni studio iz Zagreba. Bez posrednika, bez nepotrebne birokracije, uz osobnu uključenost u svaki projekt.",
+    "cta": "Upoznaj studio"
+  },
+  "Process": {
+    "label": "Kako radimo",
+    "title": "Proces koji",
+    "subtitle": "ima smisla",
+    "steps": {
+      "discovery": {
+        "number": "01",
+        "title": "Razgovor",
+        "description": "Upoznajemo tvoje poslovanje, ciljeve i ono što ti stvarno treba."
+      },
+      "design": {
+        "number": "02",
+        "title": "Dizajn",
+        "description": "Gradimo vizualni pravac koji odgovara tvom brendu i tvojim klijentima."
+      },
+      "development": {
+        "number": "03",
+        "title": "Razvoj",
+        "description": "Kodiramo stranicu koja je brza, sigurna i jednostavna za održavanje."
+      },
+      "launch": {
+        "number": "04",
+        "title": "Lansiranje i podrška",
+        "description": "Pratimo stranicu nakon objave i brinemo se da sve radi kako treba."
+      }
+    }
+  },
+  "FinalCta": {
+    "line1": "Spremni za",
+    "line2": "ozbiljniju stranicu?",
+    "button": "Zatraži ponudu"
+  },
   "Footer": {
     "closingLine1": "Napravimo",
     "closingLine2": "nešto korisno.",

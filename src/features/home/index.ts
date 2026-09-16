@@ -1,7 +1,7 @@
 export { Hero } from "./Hero";
-export { Features } from "./Features";
+export { Services } from "./Services";
 export { Work } from "./Work";
+export { AboutTeaser } from "./AboutTeaser";
 export { Process } from "./Process";
-export { Testimonials } from "./Testimonials";
-export { Pricing } from "./Pricing";
+export { FinalCta } from "./FinalCta";
 export { Contact } from "./Contact";

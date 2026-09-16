@@ -1,24 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
-import { heroConfig } from "@/config";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function HeroButtons() {
+  const t = useTranslations("Hero");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.6 }}
-      className="flex flex-col sm:flex-row gap-4"
+      className="flex flex-col gap-4 sm:flex-row"
     >
-      <button className="border border-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors flex items-center justify-center">
-        {heroConfig.buttons.primary.label}
+      <Link
+        href="/work"
+        className="flex items-center justify-center border border-foreground px-8 py-3 text-sm uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
+      >
+        {t("primaryCta")}
         <ArrowRight className="ml-2 h-4 w-4" />
-      </button>
-      <button className="border border-neutral-800 px-8 py-3 text-sm uppercase tracking-widest text-neutral-400 hover:border-neutral-600 hover:text-white transition-colors">
-        {heroConfig.buttons.secondary.label}
-      </button>
+      </Link>
+      <Link
+        href="/contact"
+        className="flex items-center justify-center border border-border px-8 py-3 text-sm uppercase tracking-widest text-muted-foreground transition-colors hover:border-accent hover:text-accent"
+      >
+        {t("secondaryCta")}
+      </Link>
     </motion.div>
   );
 }

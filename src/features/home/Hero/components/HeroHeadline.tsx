@@ -1,17 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { TextGenerateEffect } from "@/components/TextGenerateEffect";
-import { heroConfig } from "@/config";
 
 export function HeroHeadline() {
+  const t = useTranslations("Hero");
+
+  const lines = [
+    { text: t("line1"), className: "" },
+    { text: t("line2"), className: "text-muted-foreground" },
+    { text: t("line3"), className: "" },
+  ];
+
   return (
-    <h1>
-      {heroConfig.headlines.map((headline, index) => (
+    <h1 className="font-display">
+      {lines.map((line, index) => (
         <TextGenerateEffect
-          key={headline.text}
-          words={headline.text}
-          className={`text-5xl md:text-7xl lg:text-8xl font-bold m-0 leading-tight tracking-tighter ${headline.className}`}
+          key={line.text}
+          words={line.text}
+          className={`m-0 text-display-2xl font-bold leading-[0.95] tracking-tight ${line.className}`}
           duration={0.5}
           speed={0.2}
           initialDelay={0.2 + index * 0.2}
