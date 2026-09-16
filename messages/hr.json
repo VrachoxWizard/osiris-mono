@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "OSIRIS | Web stranice koje rade svoj posao",
-    "description": "Web dizajn, razvoj, održavanje i SEO za tvrtke u Hrvatskoj koje žele ozbiljniju prisutnost na internetu."
+    "description": "Dizajn, razvoj, održavanje i SEO za hrvatske tvrtke kojima treba stranica koja stvarno radi, a ne samo postoji."
   },
   "Nav": {
     "work": "Radovi",
@@ -16,7 +16,7 @@
     "line1": "WEB STRANICE",
     "line2": "KOJE RADE",
     "line3": "SVOJ POSAO.",
-    "description": "Dizajn, razvoj, održavanje i SEO za tvrtke koje žele ozbiljniju prisutnost na internetu.",
+    "description": "Dizajn, razvoj, održavanje i SEO za tvrtke kojima treba stranica koja stvarno radi.",
     "primaryCta": "Pogledaj radove",
     "secondaryCta": "Kontaktiraj nas",
     "scroll": "Skroliraj",
@@ -31,17 +31,17 @@
       "web": {
         "number": "01",
         "title": "Web stranice",
-        "description": "Moderne, brze i responzivne web stranice građene oko stvarnih potreba tvog poslovanja."
+        "description": "Moderne, brze i responzivne stranice, građene oko onoga što tvoje poslovanje stvarno treba."
       },
       "maintenance": {
         "number": "02",
         "title": "Održavanje",
-        "description": "Redovita briga koja tvoju stranicu drži sigurnom, ažurnom i brzom nakon lansiranja."
+        "description": "Redovita briga koja stranicu drži sigurnom, ažurnom i brzom, dugo nakon lansiranja."
       },
       "seo": {
         "number": "03",
         "title": "SEO",
-        "description": "Tehnički temelji, struktura i sadržaj zbog kojih te ljudi pronađu na Googleu."
+        "description": "Tehnički temelji, struktura i sadržaj zbog kojih te ljudi pronađu na Googleu — i ostanu."
       }
     }
   },
@@ -55,7 +55,7 @@
     "label": "Studio",
     "title": "Mali tim.",
     "subtitle": "Direktan pristup.",
-    "description": "OSIRIS je neovisni digitalni studio iz Zagreba. Bez posrednika, bez nepotrebne birokracije, uz osobnu uključenost u svaki projekt.",
+    "description": "OSIRIS je neovisni digitalni studio iz Zagreba. Bez posrednika, bez nepotrebne birokracije — samo osobna uključenost u svaki projekt.",
     "cta": "Upoznaj studio"
   },
   "Process": {
@@ -116,11 +116,11 @@
     "eyebrow": "Usluge",
     "heading": "Ono u čemu",
     "headingAccent": "smo dobri.",
-    "intro": "Tri usluge, jedan fokus: stranica koja stvarno radi svoj posao, od prvog dana i dugo poslije.",
+    "intro": "Tri usluge, jedan fokus: stranica koja stvarno radi svoj posao — od prvog dana, i dugo poslije.",
     "web": {
       "number": "01",
       "title": "Web stranice",
-      "description": "Dizajniramo i razvijamo web stranice koje odražavaju tvoje poslovanje i rade ono što trebaju, bez nepotrebnih dodataka koji usporavaju stranicu ili zbunjuju posjetitelje.",
+      "description": "Dizajniramo i razvijamo web stranice koje odražavaju tvoje poslovanje i rade točno ono što trebaju — bez dodataka koji usporavaju stranicu ili zbunjuju posjetitelje.",
       "includes": [
         "Dizajn prilagođen tvom brendu",
         "Responzivan prikaz na svim uređajima",
@@ -131,7 +131,7 @@
     "maintenance": {
       "number": "02",
       "title": "Održavanje",
-      "description": "Web stranica nakon lansiranja treba pažnju. Pratimo sigurnost, ažuriranja i brzinu kako bi sve funkcioniralo bez prekida.",
+      "description": "Stranica nakon lansiranja treba pažnju. Pratimo sigurnost, ažuriranja i brzinu kako bi sve radilo bez prekida.",
       "includes": [
         "Redovita sigurnosna ažuriranja",
         "Praćenje performansi",
@@ -142,7 +142,7 @@
     "seo": {
       "number": "03",
       "title": "SEO",
-      "description": "Dobra stranica mora biti i pronađena. Radimo na tehničkim temeljima, strukturi i sadržaju koji pomažu da te ljudi pronađu na Googleu.",
+      "description": "Dobra stranica mora biti i pronađena. Radimo na tehničkim temeljima, strukturi i sadržaju zbog kojih te ljudi pronađu na Googleu.",
       "includes": [
         "Tehnička SEO optimizacija",
         "Struktura i interno povezivanje",
@@ -158,16 +158,16 @@
     "eyebrow": "Studio",
     "heading": "Neovisni studio",
     "headingAccent": "iz Zagreba.",
-    "paragraph1": "OSIRIS je malen digitalni studio koji radi s manjim i srednjim tvrtkama u Hrvatskoj. Nema slojeva menadžmenta ni prebacivanja između odjela, komuniciraš izravno s osobom koja radi na tvom projektu.",
-    "paragraph2": "Ta veličina je prednost. Manje sastanaka, manje birokracije, više vremena provedenog na stvarnom radu. Svaki projekt dobiva punu pažnju, a ne djelić vremena raspoređen na desetke klijenata.",
-    "paragraph3": "Fokus je uvijek isti: stranica koja izgleda profesionalno, radi brzo i stvarno pomaže poslovanju, bez obzira je li riječ o novoj stranici, redizajnu, održavanju ili SEO-u.",
+    "paragraph1": "OSIRIS je malen digitalni studio koji radi s manjim i srednjim tvrtkama u Hrvatskoj. Nema slojeva menadžmenta ni prebacivanja između odjela — komuniciraš izravno s osobom koja radi na tvom projektu.",
+    "paragraph2": "Ta veličina je prednost. Manje sastanaka, manje birokracije, više vremena za stvaran rad. Svaki projekt dobiva punu pažnju, ne djelić vremena razvučen na desetke klijenata.",
+    "paragraph3": "Fokus je uvijek isti: stranica koja izgleda profesionalno, radi brzo i stvarno pomaže poslovanju — bila to nova stranica, redizajn, održavanje ili SEO.",
     "cta": "Zatraži ponudu"
   },
   "ContactPage": {
     "eyebrow": "Kontakt",
     "heading": "Razgovarajmo",
     "headingAccent": "o projektu.",
-    "intro": "Kratak opis onoga što ti treba je dovoljan za početak. Javljamo se u roku jednog radnog dana.",
+    "intro": "Kratak opis onoga što ti treba dovoljan je za početak. Javljamo se u roku jednog radnog dana.",
     "form": {
       "name": "Ime i prezime",
       "company": "Tvrtka",

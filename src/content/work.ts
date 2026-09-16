@@ -21,16 +21,16 @@ export const workProjects: WorkProject[] = [
         liveUrl: "https://www.atasol.hr/",
         image: "/work/atasol.png",
         summary: {
-            hr: "Web stranica za psihoterapeutsku praksu fokusiranu na somatski pristup i rad s traumom.",
-            en: "A website for a somatic psychotherapy practice focused on body-centered trauma work.",
+            hr: "Web stranica za psihoterapeutsku praksu usmjerenu na somatski pristup i rad s traumom.",
+            en: "A website for a psychotherapy practice built around somatic, trauma-informed care.",
         },
         challenge: {
-            hr: "Tema zahtijeva povjerenje i smirenost, a stranica je trebala djelovati profesionalno bez hladnoće kliničkog pristupa.",
-            en: "The subject matter calls for trust and calm, and the site needed to feel professional without the coldness of a clinical approach.",
+            hr: "Tema traži povjerenje i mir, a stranica je morala djelovati stručno bez hladnoće klinike.",
+            en: "The subject calls for trust and calm, and the site had to feel expert without the chill of a clinic.",
         },
         solution: {
-            hr: "Mirna vizualna atmosfera, jasna navigacija prema uslugama i naručivanju termina te prostor za edukativni sadržaj.",
-            en: "A calm visual atmosphere, clear navigation toward services and booking, and room for educational content.",
+            hr: "Mirna vizualna atmosfera, jasan put do usluga i termina te prostor za edukativni sadržaj.",
+            en: "A calm visual atmosphere, a clear path to services and booking, and room for educational content.",
         },
     },
     {
@@ -46,8 +46,8 @@ export const workProjects: WorkProject[] = [
             en: "A website for a studio specializing in premium interior adaptations and design.",
         },
         challenge: {
-            hr: "Vizualni rad nosi cijelu priču, a stranica je trebala prezentirati projekte bez odvlačenja pažnje od samog dizajna.",
-            en: "The visual work has to carry the story, and the site needed to present projects without distracting from the design itself.",
+            hr: "Vizualni rad nosi cijelu priču, a stranica je morala prikazati projekte bez ičega što odvlači pažnju od samog dizajna.",
+            en: "The visual work carries the whole story, and the site had to present projects with nothing pulling focus from the design itself.",
         },
         solution: {
             hr: "Minimalan, fotografijom vođen prikaz projekata s naglaskom na kvalitetu izrade.",

@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "OSIRIS | Websites That Do Their Job",
-    "description": "Web design, development, maintenance, and SEO for Croatian businesses that want a serious online presence."
+    "description": "Design, development, maintenance, and SEO for Croatian businesses that want a website that actually works — not just exists."
   },
   "Nav": {
     "work": "Work",
@@ -16,7 +16,7 @@
     "line1": "WEBSITES THAT",
     "line2": "DO THEIR",
     "line3": "JOB.",
-    "description": "Design, development, maintenance, and SEO for businesses that want a serious presence online.",
+    "description": "Design, development, maintenance, and SEO for businesses that need a website that actually works.",
     "primaryCta": "View work",
     "secondaryCta": "Get in touch",
     "scroll": "Scroll",
@@ -31,17 +31,17 @@
       "web": {
         "number": "01",
         "title": "Web Development",
-        "description": "Modern, fast, responsive websites built around what your business actually needs."
+        "description": "Modern, fast, responsive websites, built around what your business actually needs."
       },
       "maintenance": {
         "number": "02",
         "title": "Maintenance",
-        "description": "Ongoing care that keeps your website secure, current, and fast after launch."
+        "description": "Ongoing care that keeps your website secure, current, and fast, long after launch."
       },
       "seo": {
         "number": "03",
         "title": "SEO",
-        "description": "Technical foundations, structure, and content that get you found on Google."
+        "description": "Technical foundations, structure, and content that get you found on Google — and keep you there."
       }
     }
   },
@@ -55,7 +55,7 @@
     "label": "Studio",
     "title": "Small team.",
     "subtitle": "Direct approach.",
-    "description": "OSIRIS is an independent digital studio based in Zagreb. No middlemen, no unnecessary bureaucracy, and personal involvement in every project.",
+    "description": "OSIRIS is an independent digital studio based in Zagreb. No middlemen, no unnecessary bureaucracy — just personal involvement in every project.",
     "cta": "Meet the studio"
   },
   "Process": {
@@ -116,11 +116,11 @@
     "eyebrow": "Services",
     "heading": "What we're",
     "headingAccent": "good at.",
-    "intro": "Three services, one focus: a website that actually does its job, from day one and long after.",
+    "intro": "Three services, one focus: a website that actually does its job — from day one, and long after.",
     "web": {
       "number": "01",
       "title": "Web Development",
-      "description": "We design and build websites that reflect your business and do what they need to, without extra features that slow the site down or confuse visitors.",
+      "description": "We design and build websites that reflect your business and do exactly what they need to — without extra features that slow the site down or confuse visitors.",
       "includes": [
         "Design tailored to your brand",
         "Responsive on every device",
@@ -142,7 +142,7 @@
     "seo": {
       "number": "03",
       "title": "SEO",
-      "description": "A good website also needs to be found. We work on technical foundations, structure, and content that help people find you on Google.",
+      "description": "A good website also needs to be found. We work on technical foundations, structure, and content that get you found on Google.",
       "includes": [
         "Technical SEO optimization",
         "Structure and internal linking",
@@ -158,9 +158,9 @@
     "eyebrow": "Studio",
     "heading": "An independent studio",
     "headingAccent": "from Zagreb.",
-    "paragraph1": "OSIRIS is a small digital studio working with small and medium businesses in Croatia. There are no layers of management or handoffs between departments, you talk directly to the person working on your project.",
-    "paragraph2": "That size is an advantage. Fewer meetings, less bureaucracy, more time spent on actual work. Every project gets full attention, not a fraction of time split across dozens of clients.",
-    "paragraph3": "The focus stays the same: a website that looks professional, runs fast, and actually helps the business, whether that means a new site, a redesign, maintenance, or SEO.",
+    "paragraph1": "OSIRIS is a small digital studio working with small and medium businesses in Croatia. No layers of management, no handoffs between departments — you talk directly to the person working on your project.",
+    "paragraph2": "That size is an advantage. Fewer meetings, less bureaucracy, more time spent on actual work. Every project gets full attention, not a sliver of time spread across dozens of clients.",
+    "paragraph3": "The focus stays the same: a website that looks professional, runs fast, and actually helps the business — whether that's a new site, a redesign, maintenance, or SEO.",
     "cta": "Get in touch"
   },
   "ContactPage": {
