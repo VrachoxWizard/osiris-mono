@@ -2,7 +2,6 @@
 
 import { forwardRef } from "react";
 import { motion } from "motion/react";
-import { OsirisMark } from "@/components";
 
 const shapeAnimationDelay = 0.6;
 
@@ -88,7 +87,7 @@ export const HeroShape = forwardRef<HTMLDivElement>((_, ref) => {
                 transition={{ duration: 0.5, delay: shapeAnimationDelay + 0.7 }}
               ></motion.div>
 
-              {/* Center: the OSIRIS mark */}
+              {/* Center accent */}
               <motion.div
                 className="absolute top-1/4 left-1/4 flex h-1/2 w-1/2 items-center justify-center border border-border"
                 initial={{ opacity: 0, scale: 0.7 }}
@@ -121,7 +120,7 @@ export const HeroShape = forwardRef<HTMLDivElement>((_, ref) => {
                       damping: 15,
                     }}
                   >
-                    <OsirisMark className="h-10 w-8 text-accent" />
+                    <div className="h-8 w-8 bg-accent" />
                   </motion.div>
                 </motion.div>
               </motion.div>

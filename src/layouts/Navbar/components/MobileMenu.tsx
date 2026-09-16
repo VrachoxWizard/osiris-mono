@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "motion/react";
 import { Link, usePathname } from "@/i18n/navigation";
-import { OsirisMark, LanguageSwitcher } from "@/components";
+import { LanguageSwitcher } from "@/components";
 import { navLinks, mobileMenuAnimationConfig } from "../config";
 
 interface MobileMenuProps {
@@ -25,8 +25,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
           className="fixed inset-0 z-40 flex flex-col bg-background md:hidden"
         >
-          <OsirisMark className="pointer-events-none absolute -right-10 bottom-16 h-64 w-52 text-foreground/5" />
-
           <nav className="flex flex-1 flex-col justify-center gap-2 px-6">
             {navLinks.map((link, index) => {
               const isActive = pathname === link.href;

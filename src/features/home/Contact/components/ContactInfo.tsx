@@ -1,8 +1,8 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Card } from "@/components/ui";
-import { contactConfig } from "@/config";
 
 interface ContactItemProps {
   icon: React.ReactNode;
@@ -13,9 +13,9 @@ interface ContactItemProps {
 function ContactItem({ icon, label, children }: ContactItemProps) {
   return (
     <div className="flex items-start">
-      <div className="bg-white/10 p-2 rounded-sm mr-4">{icon}</div>
+      <div className="mr-4 bg-foreground/10 p-2">{icon}</div>
       <div>
-        <div className="text-sm uppercase tracking-widest text-white/70 mb-2">
+        <div className="mb-2 text-sm uppercase tracking-widest text-muted-foreground">
           {label}
         </div>
         {children}
@@ -25,51 +25,16 @@ function ContactItem({ icon, label, children }: ContactItemProps) {
 }
 
 export function ContactInfo() {
-  const { info } = contactConfig;
+  const t = useTranslations("ContactPage");
+  const tFooter = useTranslations("Footer");
 
   return (
     <Card className="h-full">
-      <h3 className="text-2xl font-bold mb-6 text-white">
-        Contact Information
-      </h3>
+      <h3 className="mb-6 text-2xl font-bold text-foreground">{t("infoHeading")}</h3>
       <div className="space-y-8">
-        <ContactItem
-          icon={<Mail className="w-5 h-5 text-white" />}
-          label="Email"
-        >
-          <a
-            href={`mailto:${info.email}`}
-            className="text-white hover:text-white/70 transition-colors"
-          >
-            {info.email}
-          </a>
+        <ContactItem icon={<MapPin className="h-5 w-5 text-foreground" />} label="Zagreb">
+          <address className="not-italic text-foreground/80">{tFooter("location")}</address>
         </ContactItem>
-
-        <ContactItem
-          icon={<Phone className="w-5 h-5 text-white" />}
-          label="Phone"
-        >
-          <a
-            href={`tel:${info.phone.replace(/\s/g, "")}`}
-            className="text-white hover:text-white/70 transition-colors"
-          >
-            {info.phone}
-          </a>
-        </ContactItem>
-
-        <ContactItem
-          icon={<MapPin className="w-5 h-5 text-white" />}
-          label="Address"
-        >
-          <address className="not-italic text-white/80">
-            {info.address.street}
-            <br />
-            {info.address.city}
-            <br />
-            {info.address.country}
-          </address>
-        </ContactItem>
-
       </div>
     </Card>
   );

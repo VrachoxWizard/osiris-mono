@@ -2,18 +2,15 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { OsirisMark, LanguageSwitcher } from "@/components";
+import { LanguageSwitcher } from "@/components";
 import { FooterLogo, FooterNav, Copyright } from "./components";
-
-const EMAIL = "hello@osiris.hr";
 
 export function Footer() {
   const t = useTranslations("Footer");
+  const tNav = useTranslations("Nav");
 
   return (
     <footer className="relative overflow-hidden border-t border-border">
-      <OsirisMark className="pointer-events-none absolute -right-16 -top-10 h-104 w-80 text-foreground/5 md:-right-10 md:h-136 md:w-104" />
-
       <div className="relative mx-auto max-w-360 px-4 py-20 md:px-8 md:py-28">
         <Link
           href="/contact"
@@ -24,13 +21,6 @@ export function Footer() {
             {t("closingLine2")}
           </span>
         </Link>
-
-        <a
-          href={`mailto:${EMAIL}`}
-          className="mt-8 inline-block border-b border-border text-lg text-muted-foreground transition-colors hover:border-accent hover:text-accent"
-        >
-          {EMAIL}
-        </a>
 
         <div className="mt-20 grid grid-cols-2 gap-10 border-t border-border pt-10 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
@@ -49,12 +39,12 @@ export function Footer() {
             <p className="mb-3 text-xs uppercase tracking-widest text-muted-foreground">
               {t("contactHeading")}
             </p>
-            <a
-              href={`mailto:${EMAIL}`}
+            <Link
+              href="/contact"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              {EMAIL}
-            </a>
+              {tNav("contact")}
+            </Link>
           </div>
 
           <div>
