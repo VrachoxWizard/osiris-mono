@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-background: #0a0a0b;
+  --color-foreground: #f2ede2;
+
+  --color-card: #111113;
+  --color-card-foreground: #f2ede2;
+  --color-popover: #111113;
+  --color-popover-foreground: #f2ede2;
+
+  --color-primary: #f2ede2;
+  --color-primary-foreground: #0a0a0b;
+
+  --color-secondary: #19191c;
+  --color-secondary-foreground: #f2ede2;
+
+  --color-muted: #1c1c1f;
+  --color-muted-foreground: #96938d;
+
+  --color-accent: #6e56cf;
+  --color-accent-hover: #7f68d9;
+  --color-accent-foreground: #f2ede2;
+
+  --color-destructive: #e5484d;
+  --color-destructive-foreground: #f2ede2;
+
+  --color-border: #262629;
+  --color-input: #262629;
+  --color-ring: #6e56cf;
+
+  --radius: 0rem;
+
+  /* Fluid editorial type scale */
+  --text-display-2xl: clamp(3.25rem, 1.6rem + 7vw, 9rem);
+  --text-display-xl: clamp(2.75rem, 1.6rem + 5vw, 6.5rem);
+  --text-display-lg: clamp(2.25rem, 1.5rem + 3.2vw, 4.5rem);
+  --text-display-md: clamp(1.75rem, 1.35rem + 1.8vw, 2.75rem);
+
+  --ease-brutalist: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Native cursor is replaced by FloatingCursor on desktop (skipped for reduced-motion users) */
+  @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+    * {
+      cursor: none;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted-foreground);
+  }
+}
