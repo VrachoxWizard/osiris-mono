@@ -21,9 +21,9 @@ export function Hero() {
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
           <div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.4 }}
               className="mb-6"
             >
               <Badge variant="outline">{t("badge")}</Badge>
@@ -31,10 +31,13 @@ export function Hero() {
 
             <HeroHeadline />
 
+            {/* Opacity is never animated here on purpose -- this paragraph is
+                the page's LCP element, and fading it in was adding ~1.4s of
+                pure render delay to LCP for no real visual benefit. */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="mb-8 mt-6 max-w-md text-lg text-muted-foreground"
             >
               {t("description")}

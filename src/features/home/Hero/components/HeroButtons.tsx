@@ -10,9 +10,9 @@ export function HeroButtons() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.6 }}
+      initial={{ y: 20 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.4, delay: 0.2 }}
       className="flex flex-col gap-4 sm:flex-row"
     >
       <Link

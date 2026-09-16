@@ -19,8 +19,8 @@
   --color-muted: #1c1c1f;
   --color-muted-foreground: #96938d;
 
-  --color-accent: #6e56cf;
-  --color-accent-hover: #7f68d9;
+  --color-accent: #7c68d9;
+  --color-accent-hover: #9484e3;
   --color-accent-foreground: #f2ede2;
 
   --color-destructive: #e5484d;
@@ -28,7 +28,7 @@
 
   --color-border: #262629;
   --color-input: #262629;
-  --color-ring: #6e56cf;
+  --color-ring: #7c68d9;
 
   --radius: 0rem;
 

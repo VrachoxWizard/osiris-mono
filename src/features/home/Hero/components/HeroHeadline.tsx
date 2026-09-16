@@ -19,9 +19,9 @@ export function HeroHeadline() {
           key={line.text}
           words={line.text}
           className={`m-0 text-display-2xl font-bold leading-[0.95] tracking-tight ${line.className}`}
-          duration={0.5}
-          speed={0.2}
-          initialDelay={0.2 + index * 0.2}
+          duration={0.4}
+          speed={0.1}
+          initialDelay={index * 0.1}
         />
       ))}
     </h1>
