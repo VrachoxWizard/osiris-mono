@@ -5,3 +5,4 @@ export {
     ContentGenerateEffect,
 } from "./TextGenerateEffect";
 export { OsirisMark, OsirisWordmark } from "./brand";
+export { LanguageSwitcher } from "./LanguageSwitcher";

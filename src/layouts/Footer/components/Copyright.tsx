@@ -1,9 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 export function Copyright() {
+  const t = useTranslations("Footer");
+
   return (
-    <p className="text-neutral-400 text-sm mb-4 md:mb-0">
-      © {new Date().getFullYear()} MONO. All rights reserved.
+    <p className="text-sm text-muted-foreground">
+      © {new Date().getFullYear()} OSIRIS. {t("rights")}
     </p>
   );
 }

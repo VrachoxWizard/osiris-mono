@@ -35,17 +35,37 @@ export function useNoiseBackground() {
             ctx.putImageData(imageData, 0, 0);
         };
 
+        const prefersReducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        if (prefersReducedMotion) {
+            // Render a single static frame instead of a continuous flicker.
+            createNoise();
+            return () => window.removeEventListener("resize", setCanvasDimensions);
+        }
+
         let animationFrameId: number;
         const render = () => {
             createNoise();
             animationFrameId = window.requestAnimationFrame(render);
         };
 
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                window.cancelAnimationFrame(animationFrameId);
+            } else {
+                render();
+            }
+        };
+
         render();
+        document.addEventListener("visibilitychange", handleVisibilityChange);
 
         return () => {
             window.cancelAnimationFrame(animationFrameId);
             window.removeEventListener("resize", setCanvasDimensions);
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
         };
     }, []);
 

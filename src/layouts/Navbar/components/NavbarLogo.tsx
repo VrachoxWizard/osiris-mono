@@ -1,11 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { OsirisMark, OsirisWordmark } from "@/components";
 
 export function NavbarLogo() {
   return (
-    <Link href="/" className="text-white font-bold text-2xl tracking-tighter">
-      MONO<span className="text-neutral-400">.</span>
+    <Link href="/" className="flex items-center gap-2.5 text-foreground">
+      <OsirisMark className="h-6 w-5 text-foreground" />
+      <OsirisWordmark className="text-lg" />
     </Link>
   );
 }

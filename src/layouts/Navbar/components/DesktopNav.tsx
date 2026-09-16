@@ -1,34 +1,42 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { navLinks } from "../config";
 
-interface DesktopNavProps {
-  onContactClick?: () => void;
-}
+export function DesktopNav() {
+  const t = useTranslations("Nav");
+  const pathname = usePathname();
 
-export function DesktopNav({ onContactClick }: DesktopNavProps) {
   return (
     <>
-      <nav className="hidden md:flex items-center space-x-8">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className="text-neutral-400 hover:text-white transition-colors text-sm uppercase tracking-widest"
-          >
-            {link.label}
-          </Link>
-        ))}
+      <nav className="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              aria-current={isActive ? "page" : undefined}
+              className={`text-sm uppercase tracking-widest transition-colors ${
+                isActive
+                  ? "text-accent"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              {t(link.key)}
+            </Link>
+          );
+        })}
       </nav>
 
       <div className="hidden md:block">
-        <button
-          onClick={onContactClick}
-          className="border border-white px-5 py-2 text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
+        <Link
+          href="/contact"
+          className="border border-foreground px-5 py-2 text-sm uppercase tracking-widest text-foreground transition-colors hover:bg-foreground hover:text-background"
         >
-          Contact
-        </button>
+          {t("contact")}
+        </Link>
       </div>
     </>
   );

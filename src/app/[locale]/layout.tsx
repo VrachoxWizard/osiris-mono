@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { Inter, Bricolage_Grotesque } from "next/font/google";
+import { MotionConfig } from "motion/react";
 import { routing } from "@/i18n/routing";
 import { getPathname } from "@/i18n/navigation";
 import { Navbar, Footer } from "@/layouts";
@@ -98,11 +99,13 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${inter.variable} ${bricolage.variable}`}>
       <body className="mx-auto max-w-360 bg-background font-sans text-foreground antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <NoiseBackground />
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <FloatingCursor />
+          <MotionConfig reducedMotion="user">
+            <NoiseBackground />
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <FloatingCursor />
+          </MotionConfig>
         </NextIntlClientProvider>
       </body>
     </html>

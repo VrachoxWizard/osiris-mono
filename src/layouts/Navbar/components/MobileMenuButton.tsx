@@ -9,7 +9,12 @@ interface MobileMenuButtonProps {
 
 export function MobileMenuButton({ isOpen, onClick }: MobileMenuButtonProps) {
   return (
-    <button className="md:hidden text-white" onClick={onClick}>
+    <button
+      className="z-50 text-foreground md:hidden"
+      onClick={onClick}
+      aria-expanded={isOpen}
+      aria-label={isOpen ? "Close menu" : "Open menu"}
+    >
       {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
     </button>
   );

@@ -1,18 +1,22 @@
 "use client";
 
-import { footerNavLinks } from "../config";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { navLinks } from "../../Navbar/config";
 
 export function FooterNav() {
+  const t = useTranslations("Nav");
+
   return (
-    <nav className="flex gap-6">
-      {footerNavLinks.map((link) => (
-        <a
+    <nav className="flex flex-col gap-3">
+      {navLinks.map((link) => (
+        <Link
           key={link.href}
           href={link.href}
-          className="text-neutral-400 hover:text-white transition-colors text-sm"
+          className="text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
-          {link.label}
-        </a>
+          {t(link.key)}
+        </Link>
       ))}
     </nav>
   );

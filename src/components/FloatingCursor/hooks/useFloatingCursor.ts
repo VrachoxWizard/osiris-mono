@@ -13,7 +13,13 @@ export function useFloatingCursor() {
     const requestRef = useRef<number | null>(null);
 
     const animateCursor = useCallback(() => {
-        if (!circleRef.current || !dotRef.current) return;
+        if (!circleRef.current || !dotRef.current) {
+            // Refs aren't attached yet (e.g. this frame fired before the
+            // `mounted`-triggered render committed) -- keep polling instead
+            // of dying, or the loop never gets another chance to start.
+            requestRef.current = requestAnimationFrame(animateCursor);
+            return;
+        }
 
         // Smoother lerp with higher factor for faster response
         circlePositionRef.current.x +=
