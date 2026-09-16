@@ -4,3 +4,4 @@ export {
     TextGenerateEffect,
     ContentGenerateEffect,
 } from "./TextGenerateEffect";
+export { OsirisMark, OsirisWordmark } from "./brand";
