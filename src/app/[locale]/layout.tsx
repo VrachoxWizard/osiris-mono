@@ -114,7 +114,9 @@ export default async function LocaleLayout({
           }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <MotionConfig reducedMotion="user">
+          <MotionConfig
+            reducedMotion={process.env.NODE_ENV === "production" ? "user" : "never"}
+          >
             <NoiseBackground />
             <Navbar />
             <main>{children}</main>

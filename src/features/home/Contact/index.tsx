@@ -1,12 +1,11 @@
 "use client";
 
-import { ContactForm, ContactInfo } from "./components";
+import { ContactForm } from "./components";
 
 export function Contact() {
   return (
-    <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+    <div className="mx-auto max-w-2xl">
       <ContactForm />
-      <ContactInfo />
     </div>
   );
 }

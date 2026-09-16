@@ -18,7 +18,7 @@ export function HeroHeadline() {
         <TextGenerateEffect
           key={line.text}
           words={line.text}
-          className={`m-0 text-display-2xl font-bold leading-[0.95] tracking-tight ${line.className}`}
+          className={`m-0 text-display-2xl font-bold leading-[1.1] tracking-tight ${line.className}`}
           duration={0.4}
           speed={0.1}
           initialDelay={index * 0.1}

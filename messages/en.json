@@ -186,8 +186,7 @@
       "submitting": "Sending...",
       "success": "Thanks. We'll be in touch soon.",
       "error": "Something went wrong. Please try again or email us directly."
-    },
-    "infoHeading": "Contact details"
+    }
   },
   "Footer": {
     "closingLine1": "Let's build",
