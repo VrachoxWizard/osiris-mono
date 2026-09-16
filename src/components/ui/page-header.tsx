@@ -21,9 +21,9 @@ export function PageHeader({
 }: PageHeaderProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={{ y: 20 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.4 }}
       className={cn("mx-auto max-w-360 px-4 pb-16 pt-40 md:px-8 md:pt-48", className)}
     >
       <div className="mb-6 flex items-center gap-4">
