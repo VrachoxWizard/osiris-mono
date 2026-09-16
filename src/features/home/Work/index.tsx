@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
-import { SectionHeader, Button } from "@/components/ui";
+import { Button } from "@/components/ui";
 import { Link } from "@/i18n/navigation";
 import { workProjects } from "@/content/work";
 import { ProjectCard } from "./components";

@@ -1,66 +1,36 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export function useFloatingCursor() {
     const dotRef = useRef<HTMLDivElement>(null);
     const circleRef = useRef<HTMLDivElement>(null);
-    const [clicked, setClicked] = useState(false);
+    const clickedRef = useRef(false);
     const [linkHovered, setLinkHovered] = useState(false);
     const [mounted, setMounted] = useState(false);
     const positionRef = useRef({ x: 0, y: 0 });
     const circlePositionRef = useRef({ x: 0, y: 0 });
     const requestRef = useRef<number | null>(null);
+    const tickRef = useRef<() => void>(() => {});
 
-    const animateCursor = useCallback(() => {
-        if (!circleRef.current || !dotRef.current) {
-            // Refs aren't attached yet (e.g. this frame fired before the
-            // `mounted`-triggered render committed) -- keep polling instead
-            // of dying, or the loop never gets another chance to start.
-            requestRef.current = requestAnimationFrame(animateCursor);
-            return;
-        }
-
-        // Smoother lerp with higher factor for faster response
-        circlePositionRef.current.x +=
-            (positionRef.current.x - circlePositionRef.current.x) * 0.25;
-        circlePositionRef.current.y +=
-            (positionRef.current.y - circlePositionRef.current.y) * 0.25;
-        circleRef.current.style.transform = `translate3d(${circlePositionRef.current.x}px, ${circlePositionRef.current.y}px, 0) translate(-50%, -50%) scale(${clicked ? 0.8 : 1})`;
-
-        dotRef.current.style.transform = `translate3d(${positionRef.current.x}px, ${positionRef.current.y}px, 0) translate(-50%, -50%)`;
-
-        requestRef.current = requestAnimationFrame(animateCursor);
-    }, [clicked]);
-
-    const resetCursorPosition = useCallback(
-        (e?: MouseEvent) => {
-            if (requestRef.current) {
-                cancelAnimationFrame(requestRef.current);
-                requestRef.current = null;
+    // The tick only ever reads refs, so it's safe to set up once. Held in a
+    // ref (rather than referencing a useCallback result recursively) so the
+    // rAF loop can always reach the latest version without a self-reference.
+    useEffect(() => {
+        tickRef.current = () => {
+            if (circleRef.current && dotRef.current) {
+                circlePositionRef.current.x +=
+                    (positionRef.current.x - circlePositionRef.current.x) * 0.25;
+                circlePositionRef.current.y +=
+                    (positionRef.current.y - circlePositionRef.current.y) * 0.25;
+                circleRef.current.style.transform = `translate3d(${circlePositionRef.current.x}px, ${circlePositionRef.current.y}px, 0) translate(-50%, -50%) scale(${clickedRef.current ? 0.8 : 1})`;
+                dotRef.current.style.transform = `translate3d(${positionRef.current.x}px, ${positionRef.current.y}px, 0) translate(-50%, -50%)`;
             }
-
-            let x, y;
-            if (e) {
-                x = e.clientX;
-                y = e.clientY;
-            } else {
-                x = positionRef.current.x || window.innerWidth / 2;
-                y = positionRef.current.y || window.innerHeight / 2;
-            }
-
-            positionRef.current = { x, y };
-            circlePositionRef.current = { x, y };
-
-            if (dotRef.current)
-                dotRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
-            if (circleRef.current)
-                circleRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%) scale(${clicked ? 0.8 : 1})`;
-
-            requestRef.current = requestAnimationFrame(animateCursor);
-        },
-        [animateCursor, clicked]
-    );
+            // Always reschedule -- if refs weren't attached yet on this
+            // frame, this keeps polling until they are instead of dying.
+            requestRef.current = requestAnimationFrame(() => tickRef.current());
+        };
+    }, []);
 
     useEffect(() => {
         const prefersReducedMotion = window.matchMedia(
@@ -69,7 +39,34 @@ export function useFloatingCursor() {
         // Respect reduced-motion and keep the native cursor entirely.
         if (prefersReducedMotion) return;
 
+        // Standard SSR-safe "client is ready" flag: renders null on the server
+        // and first client pass, then reveals the cursor once mounted.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
+
+        const startLoop = () => {
+            requestRef.current = requestAnimationFrame(() => tickRef.current());
+        };
+
+        const resetCursorPosition = (e?: MouseEvent) => {
+            if (requestRef.current) {
+                cancelAnimationFrame(requestRef.current);
+                requestRef.current = null;
+            }
+
+            const x = e ? e.clientX : positionRef.current.x || window.innerWidth / 2;
+            const y = e ? e.clientY : positionRef.current.y || window.innerHeight / 2;
+
+            positionRef.current = { x, y };
+            circlePositionRef.current = { x, y };
+
+            if (dotRef.current)
+                dotRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+            if (circleRef.current)
+                circleRef.current.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%) scale(${clickedRef.current ? 0.8 : 1})`;
+
+            startLoop();
+        };
 
         const initialX = window.innerWidth / 2;
         const initialY = window.innerHeight / 2;
@@ -91,7 +88,7 @@ export function useFloatingCursor() {
         };
 
         const handleMouseDown = (e: MouseEvent) => {
-            setClicked(true);
+            clickedRef.current = true;
             const dx = circlePositionRef.current.x - e.clientX;
             const dy = circlePositionRef.current.y - e.clientY;
             if (Math.sqrt(dx * dx + dy * dy) > 30) {
@@ -99,7 +96,9 @@ export function useFloatingCursor() {
             }
         };
 
-        const handleMouseUp = () => setClicked(false);
+        const handleMouseUp = () => {
+            clickedRef.current = false;
+        };
 
         // Event delegation so links/buttons added after mount (e.g. after a
         // client-side route change) are picked up without re-scanning the DOM.
@@ -114,7 +113,7 @@ export function useFloatingCursor() {
             }
         };
 
-        requestRef.current = requestAnimationFrame(animateCursor);
+        startLoop();
 
         window.addEventListener("mousemove", updatePosition);
         window.addEventListener("mousedown", handleMouseDown);
@@ -130,7 +129,7 @@ export function useFloatingCursor() {
             document.removeEventListener("mouseover", handlePointerOver);
             document.removeEventListener("mouseout", handlePointerOut);
         };
-    }, [animateCursor, resetCursorPosition]);
+    }, []);
 
-    return { dotRef, circleRef, clicked, linkHovered, mounted };
+    return { dotRef, circleRef, linkHovered, mounted };
 }

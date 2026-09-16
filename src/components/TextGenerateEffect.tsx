@@ -37,7 +37,7 @@ export const TextGenerateEffect = memo(function TextGenerateEffect({
     }, initialDelay * 1000);
 
     return () => clearTimeout(timer);
-  }, [scope.current, animate, duration, filter, speed, initialDelay]);
+  }, [animate, duration, filter, speed, initialDelay]);
 
   const renderWords = () => {
     return (
@@ -109,7 +109,7 @@ export const ContentGenerateEffect = memo(function ContentGenerateEffect({
     }, initialDelay * 1000);
 
     return () => clearTimeout(timer);
-  }, [scope.current, animate, speed, staggerChildren, initialDelay]);
+  }, [animate, speed, staggerChildren, initialDelay]);
 
   return (
     <div ref={scope} className={className}>
