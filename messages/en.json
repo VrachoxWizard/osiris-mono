@@ -1,0 +1,23 @@
+{
+  "Metadata": {
+    "title": "OSIRIS | Websites That Do Their Job",
+    "description": "Web design, development, maintenance, and SEO for Croatian businesses that want a serious online presence."
+  },
+  "Nav": {
+    "work": "Work",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "Footer": {
+    "closingLine1": "Let's build",
+    "closingLine2": "something useful.",
+    "location": "Zagreb, Croatia",
+    "navHeading": "Menu",
+    "contactHeading": "Contact",
+    "languageHeading": "Language",
+    "rights": "All rights reserved."
+  }
+}

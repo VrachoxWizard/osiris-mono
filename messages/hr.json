@@ -1,0 +1,23 @@
+{
+  "Metadata": {
+    "title": "OSIRIS | Web stranice koje rade svoj posao",
+    "description": "Web dizajn, razvoj, održavanje i SEO za tvrtke u Hrvatskoj koje žele ozbiljniju prisutnost na internetu."
+  },
+  "Nav": {
+    "work": "Radovi",
+    "services": "Usluge",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "menu": "Izbornik",
+    "close": "Zatvori"
+  },
+  "Footer": {
+    "closingLine1": "Napravimo",
+    "closingLine2": "nešto korisno.",
+    "location": "Zagreb, Hrvatska",
+    "navHeading": "Izbornik",
+    "contactHeading": "Kontakt",
+    "languageHeading": "Jezik",
+    "rights": "Sva prava pridržana."
+  }
+}
